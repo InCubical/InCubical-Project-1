@@ -1,0 +1,372 @@
+@import url('./fonts.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+#purple {
+    height: 100vh; /* Change to viewport height */
+    width: 100%;
+    top: 0;
+    position: fixed;
+    background-color: #EDBFFF;
+    z-index: 100;
+    opacity: 0;
+    display: flex; /* Use flexbox for centering */
+    align-items: center;
+    justify-content: center;
+}
+
+#marquee-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+#marquee-text {
+    font-size: 8vw;
+    text-transform: uppercase;
+    font-family: 'PPMori-Extralight';
+    letter-spacing: 1.5px;
+    white-space: nowrap;
+    animation: marquee 25s linear infinite;
+    color: #0f0d0d; /* Adjust animation duration */
+}
+
+@keyframes marquee {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(-1000%); }
+}
+
+
+.cursor {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #EDBFFF;
+    z-index: 9;
+    mix-blend-mode: difference;
+    transition: background-images  ease 05s;
+    background-position: center;
+    background-size: cover;
+}
+
+.main {
+    background-color: #0f0d0d;
+}
+
+.page1 {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 12vw;
+}
+
+
+.nav{
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 102;
+
+}
+
+.logo {
+    height: 80%;
+}
+
+.nav_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.nav_links h4 {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Gilroy-Medium';
+    letter-spacing: 1.5px;
+}
+
+.nav_links h4:nth-child(1) {
+    border-bottom: 2px solid white;
+}
+
+.profile {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: aqua;
+}
+
+.page1>h1{
+    font-size: 8vw;
+    font-family: 'PPMori-Regular';
+    margin-left: 6vw;
+}
+
+.page1>h2{
+    font-size: 8vw;
+    font-family: 'PPMori-Regular';
+    margin-left: 26vw;
+}
+
+.page1 video{
+    width: 60%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.page2 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 100px 5vw;
+    border-bottom: 2px solid #111;
+}
+
+.page2 h1{
+    font-size: 7vw;
+    font-family: 'PPMori-Extralight';
+    font-weight: 300;
+    color: #111;
+}
+
+.page2-container {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.page2-left {
+    width: 35%;
+}
+
+.page2-right {
+    width: 25%;
+}
+
+
+.page2-left h2 {
+    font-size: 4vw;
+    font-family: 'PPMori-Extralight';
+    font-weight: 300;
+    color: #111;
+    line-height: 4vw;
+}
+
+.page2-right p {
+    font-size: 16px;
+    font-family: 'Gilroy-Medium';
+    font-weight: 300;
+    color: #111;
+    line-height: 20px;
+}
+
+.page2-right button {
+    width: 100%;
+    border-radius: 50px;
+    border: none;
+    padding: 4px 0;
+    background-color: #EDBFFF;
+    color: #111;
+    margin-top: 20px;
+}
+
+.page3{
+    min-height: 300vh;
+    width: 100%;
+    position: relative;
+    padding-top: 100px;
+    border-bottom: 2px solid #fff
+}
+
+.page3 h1 {
+    font-size: 6.8vw;
+    font-family: 'PPMori-Extralight';
+    font-weight: 300;
+    color: #111;
+    margin-left: 100px;
+}
+
+.page3-part1{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0  6vw;
+}
+
+.page3-part1 img {
+    height: 500px;
+    margin-top: 160px;
+}
+
+.page3-part1 video {
+    width: 500px;
+    margin-top: 160px;
+}
+
+.page3-part2{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 6vw;
+}
+
+.page3-part2 img {
+    height: 500px;
+    margin-top: 100px;
+    object-fit: contain;
+}
+
+.page3-part2 video {
+    width: 500px;
+    margin-top: 100px;
+}
+
+.page3-part3 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6vw;
+    margin-top: 200px;
+}
+
+.page3-part3 h2 {
+    font-size: 5vw;
+    font-family: 'PPMori-Extralight';
+    font-weight: 300;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.page3-part3 a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Gilroy-Medium';
+}
+
+.redirect {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDBFFF;
+}
+
+.page4 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 100px 100px;
+}
+
+.page4 p {
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.elem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.text-div {
+    height: 140px;
+    overflow: hidden;
+}
+
+.elem h1 {
+    font-size: 7.3vw;
+    font-family: 'Gilroy-Regular';
+    transition: all ease-out 0.2s;
+}
+
+.elem img {
+    position: absolute;
+    width: 350px;
+    opacity: 0;
+    transition: all ease-out 0.3s;
+    transform: translate(10%) rotate(2deg);
+}
+
+.elem img:nth-child(1) {
+    left: 0;
+}
+
+.elem img:nth-child(3) {
+    right: 0;
+}
+
+.elem:hover h1{
+    transform: translateY(-100%);
+   
+}
+
+.elem:hover img{
+    opacity: 1;
+    transform: translate(0%) rotate(0deg);
+}
+
+.page5 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 140px 100px;
+}
+
+.page5 h2 {
+    font-size: 4vw;
+    text-transform: uppercase;
+    font-family: 'PPMori-Extralight';
+    margin-bottom: 50px;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 20px;
+    border-top: 1.5px solid  #fff;
+    font-family: 'Gilroy-Regular';
+    letter-spacing: 2px;
+}
+
+.box:nth-last-child(1) {
+    border-bottom: 1.5px solid  #fff;
+}
+
+
+footer {
+    height: 90vh;
+    width: 100%;
+    background-color: #EDBFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+footer h3 {
+    font-size: 10vw;
+    font-family: 'PPMori-Extralight';
+}
